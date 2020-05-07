@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -13,13 +15,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
-
+     //   WebView myWebView;
+        private String minGoogle = "https://www.google.se/";
     public void showExternalWebPage(){
-        // TODO: Add your code for showing external web page here
+        WebView myWebView = findViewById(R.id.my_webview);
+        myWebView.loadUrl("https://www.google.se/");
+
     }
 
     public void showInternalWebPage(){
-        // TODO: Add your code for showing internal web page here
+        WebView myWebView = findViewById(R.id.my_webview);
+        myWebView.loadUrl("file:///android_asset/test.html");
+
     }
 
     @Override
@@ -28,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        WebView myWebView = findViewById(R.id.my_webview);
+        myWebView.setWebViewClient(new WebViewClient());
+        myWebView.getSettings().setJavaScriptEnabled(true);
+
+
+       // myWebView.loadUrl("https://developer.android.com/guide/topics/ui/menus");
 
         /*
         * Rename your App. Tip: Values->Strings
@@ -54,14 +68,6 @@ public class MainActivity extends AppCompatActivity {
            one (1) screenshot showing your external web page.
         */
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -81,11 +87,14 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_external_web) {
             Log.d("==>","Will display external web page");
+         showExternalWebPage();
+
             return true;
         }
 
         if (id == R.id.action_internal_web) {
             Log.d("==>","Will display internal web page");
+            showInternalWebPage();
             return true;
         }
 

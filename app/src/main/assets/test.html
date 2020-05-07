@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>A SPA Template</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Help function that shows page p and hides all other pages
+        function showPage(p){
+            // Step 1 - Hide all pages
+            pageArr=document.getElementsByClassName("page");
+            for(let i=0;i<pageArr.length;i++){
+                let page=pageArr[i];
+                page.style.display="none";
+            }
+            // Step 2 - Show the selected page
+            document.getElementById("page"+p).style.display="block";
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); /*roboto gränsnittet */
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');  /*pacifico för dikten */
+        html {
+            font-family: 'Roboto';
+            background-color: #303030;
+            min-width: 440px;
+        }
+        .menu {
+            background-color:#f44336;
+            color:#000000;
+            opacity: ;
+            height: 80px;
+            right: 0px;
+            left:0px;
+            position: absolute;
+            top: 0px;
+            padding: 0 0 0 20px;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.30), 3px 3px 10px rgba(0,0,0,0.22);
+        }
+
+        .sidan {
+            padding: 15px;
+            position: absolute;
+            top:40px;
+            left: 60px;
+            right: 60px;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.30), 3px 3px 10px rgba(0,0,0,0.22);
+            margin-top: 50px;
+            margin-bottom: 40px;
+            background-color: #424242;
+
+
+        }
+
+        .sidotitel {
+            color: #ffff;
+        }
+
+
+
+        .button2 {
+            background-color: #d8fafc;
+            color:#000;
+            width:190px;
+            height:40px;
+            line-height: 30px;
+            border-radius: 10px;
+            margin: 10px;
+            padding-top: 7px;
+            text-align: center;
+            display:inline-block;
+        }
+        .button
+        {
+            background-color:#36e7f4;
+            color:#000;
+            width:190px;
+            height:40px;
+            line-height: 30px;
+            border-radius: 10px;
+            margin: 10px;
+            padding-top: 7px;
+            text-align: center;
+            display:inline-block;
+            font-weight: bold;
+
+        }
+
+        .dikt {
+            font-family: 'pacifico';
+            color: white;
+            opacity: 0.70;
+            font-size: 24px;
+            font-style: italic;
+        }
+
+        p {
+            color: white;
+        }
+
+
+        @media screen and (orientation:portrait)
+        {
+         p, .dikt {
+
+             overflow: hidden;
+             text-overflow: ellipsis;
+             white-space: nowrap;
+
+
+            }
+        }
+           @media screen and (orientation:landscape)
+        {
+            {
+
+            }
+
+    </style>
+</head>
+<body onload="showPage(1);">
+
+<div class="menu">
+
+    <h1>FrödingeAppen</h1>
+
+</div>
+<div class="sidan">
+    <div id="page1" class="page">
+
+        <div class="button2" onclick="showPage(1);">Gustaf Fröding</div>
+        <div class="button2" onclick="showPage(2);">Betygsätt Fröding</div>
+        <div class="button" onclick="showPage(3);">Stänk och flikar</div>
+        <div class="button" onclick="showPage(4);">Gitarr och dragharmonika</div>
+        <div class="button" onclick="showPage(5);">Nya dikter</div>
+        <div class="button" onclick="showPage(6);">Räggler å paschaser</div>
+        <div class="button" onclick="showPage(7);">Gralstänk</div>
+        <h1 class ="sidotitel"> Gustaf Fröding</h1>
+        <p>Gustaf Fröding, född 22 augusti 1860 på Alsters herrgård i Karlstads socken, Värmlands län, död 8 februari 1911 i Stockholm,<br> var en svensk författare, journalist och poet.<br> En av hans mest välkända diktsamlingar är Stänk och flikar från 1896 som bland annat innehåller dikten En morgondröm vilken fick honom åtalad men friad.<br> Han är även känd för att ha publicerat ett antal dikter på värmländsk dialekt. Han tillbringade långa tider på olika vårdinstitutioner på grund av sin psykiska ohälsa, men vad han faktiskt hade för diagnos är mycket omdiskuterat.<br> Han avled till följd av sin alkoholism och diabetes.</p>
+    </div>
+
+    <div id="page2" class="page">
+
+        <div class="button2" onclick="showPage(1);">Gustaf Fröding</div>
+        <div class="button2" onclick="showPage(2);">Betygsätt Fröding</div>
+        <div class="button" onclick="showPage(3);">Stänk och flikar</div>
+        <div class="button" onclick="showPage(4);">Gitarr och dragharmonika</div>
+        <div class="button" onclick="showPage(5);">Nya dikter</div>
+        <div class="button" onclick="showPage(6);">Räggler å paschaser</div>
+        <div class="button" onclick="showPage(7);">Gralstänk</div>
+        <h1 class ="sidotitel"> Betygsätt Fröding</h1>
+    </div>
+
+    <div id="page3" class="page">
+
+        <div class="button2" onclick="showPage(1);">Gustaf Fröding</div>
+        <div class="button2" onclick="showPage(2);">Betygsätt Fröding</div>
+        <div class="button" onclick="showPage(3);">Stänk och flikar</div>
+        <div class="button" onclick="showPage(4);">Gitarr och dragharmonika</div>
+        <div class="button" onclick="showPage(5);">Nya dikter</div>
+        <div class="button" onclick="showPage(6);">Räggler å paschaser</div>
+        <div class="button" onclick="showPage(7);">Gralstänk</div>
+        <h1 class ="sidotitel">Stänk och flikar</h1>
+        <p class="dikt">
+            Frågas: "varför blanda
+            högt och lågt så där,
+            mot det helas anda
+            olikarten skär?"
+            - svarar jag så här:
+            <br>
+            "När i huvudstaden
+            just ett regn har slutat,
+            medan vaktparaden
+            under dån av trummor
+            nalkas slottsfasaden,
+            ser jag alla slagens
+            folk i trängsel trång,
+            torgens gamla gummor,
+            som på fisken prutat
+            förmiddagen lång,
+            processionens trista
+            tåg med lik i kista,
+            barn i skratt och språng,
+            ynglingar som nicka
+            hemligt åt en flicka,
+            sneglande åt lagens
+            vakt med gömd battong,
+            prinsarna och kungen
+            tätt vid tiggarungen
+            och två män, som dricka
+            i en trappnedgång,
+            men ur Mälarvågen
+            stiger Irisbågen
+            högt mot högt som spång.
+            <br>
+            Kunde ögat skåda
+            bilden av det hela,
+            kunde örat höra
+            strängarna, som spela
+            huvudmelodin,
+            kunde sedan båda
+            konstfullt sammanföra
+            allt i symfonin,
+            <br>
+            visste då vårt öga,
+            visste då vårt öra
+            att det högsta höga
+            och det lägsta låga,
+            våra tankar våga
+            dröjande beröra,
+            såsom toner höra
+            med i harmonin.
+            <br>
+            Men de skilda ljudens
+            helbegrepp är gudens,
+            icke människans,
+            formernas och skrudens
+            sammansyn är hans.
+            <br>
+            När min blick vill famna
+            formens, dräktens, färgens
+            allt av blott en timmes
+            liv vid Mälarns vik,
+            ser den skymt och stycke,
+            ser den glimt och flik.
+            <br>
+            Vill mitt öra samna
+            allt i enhet, hör det
+            tonstänk lika bergens
+            ekon av musik,
+            intet mer, vad gör det,
+            blott en själ förnimmes,
+            blott av liv ett tycke
+            är i stänk och flik.<br></p>
+
+        <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web">font lincens</a><br>
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/">Dikt lincens</a>
+
+    </div>
+    <div id="page4" class="page">
+
+        <div class="button2" onclick="showPage(1);">Gustaf Fröding</div>
+        <div class="button2" onclick="showPage(2);">Betygsätt Fröding</div>
+        <div class="button" onclick="showPage(3);">Stänk och flikar</div>
+        <div class="button" onclick="showPage(4);">Gitarr och dragharmonika</div>
+        <div class="button" onclick="showPage(5);">Nya dikter</div>
+        <div class="button" onclick="showPage(6);">Räggler å paschaser</div>
+        <div class="button" onclick="showPage(7);">Gralstänk</div>
+        <h1 class ="sidotitel">gitarr och dragharmonika</h1>
+    </div>
+    <div id="page5" class="page">
+
+        <div class="button2" onclick="showPage(1);">Gustaf Fröding</div>
+        <div class="button2" onclick="showPage(2);">Betygsätt Fröding</div>
+        <div class="button" onclick="showPage(3);">Stänk och flikar</div>
+        <div class="button" onclick="showPage(4);">Gitarr och dragharmonika</div>
+        <div class="button" onclick="showPage(5);">Nya dikter</div>
+        <div class="button" onclick="showPage(6);">Räggler å paschaser</div>
+        <div class="button" onclick="showPage(7);">Gralstänk</div>
+        <h1 class ="sidotitel">Nya dikter</h1>
+    </div>
+    <div id="page6" class="page">
+
+        <div class="button2" onclick="showPage(1);">Gustaf Fröding</div>
+        <div class="button2" onclick="showPage(2);">Betygsätt Fröding</div>
+        <div class="button" onclick="showPage(3);">Stänk och flikar</div>
+        <div class="button" onclick="showPage(4);">Gitarr och dragharmonika</div>
+        <div class="button" onclick="showPage(5);">Nya dikter</div>
+        <div class="button" onclick="showPage(6);">Räggler å paschaser</div>
+        <div class="button" onclick="showPage(7);">Gralstänk</div>
+        <h1 class ="sidotitel">räggler å paschaser</h1>
+        <p> hej</p>
+    </div>
+    <div id="page7" class="page">
+
+        <div class="button2" onclick="showPage(1);">Gustaf Fröding</div>
+        <div class="button2" onclick="showPage(2);">Betygsätt Fröding</div>
+        <div class="button" onclick="showPage(3);">Stänk och flikar</div>
+        <div class="button" onclick="showPage(4);">Gitarr och dragharmonika</div>
+        <div class="button" onclick="showPage(5);">Nya dikter</div>
+        <div class="button" onclick="showPage(6);">Räggler å paschaser</div>
+        <div class="button" onclick="showPage(7);">Gralstänk</div>
+        <h1 class ="sidotitel">Gralstänk</h1>
+    </div>
+
+</div>
+
+</body>
+</html>
